@@ -47,6 +47,7 @@ class JournalistSerializer(serializers.ModelSerializer):
     """
     Serializer for the Journalist model.
     """
+    articles = ArticleListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Journalist
